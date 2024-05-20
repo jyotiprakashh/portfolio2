@@ -18,7 +18,7 @@ const Hero = () => {
             <span className="text-4xl sm:text-7xl font-bold relative z-20 ml-4 bg-clip-text text-transparent bg-gradient-to-b from-yellow to-orange  ">
               Jyoti Prakash
             </span>
-            ,
+
           </p>
         </div>
         <div>
