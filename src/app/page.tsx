@@ -1,5 +1,4 @@
 import React from "react";
-import { ThreeDCardDemo } from "./components/CardShow";
 import Hero from "./components/Hero";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import { Panda } from "./components/Panda";

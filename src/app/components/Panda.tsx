@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { Mesh, PlaneGeometry, MeshBasicMaterial } from "three";
+import { Mesh } from "three";
 import { GLTFLoader } from "three/examples/jsm/Addons.js";
 
 function MeshComponent() {
@@ -24,8 +24,8 @@ function MeshComponent() {
 
 export function Panda() {
   return (
-    <div className="flex justify-center z-10 absolute top-10 sm:w-56 sm:h-40 w-40 h-20 lg:w-60 lg:h-40">
-      <Canvas className=" " shadows camera={{ position: [0, 1, 5], fov: 50 }}>
+    <div className="flex justify-center z-10 absolute top-10 sm:w-60 sm:h-40 lg:w-80 lg:h-52">
+      <Canvas  shadows camera={{ position: [0, 2, 7], fov: 50 }}>
         <OrbitControls />
 
         <directionalLight
@@ -45,7 +45,13 @@ export function Panda() {
         <pointLight position={[10, 10, 10]} intensity={10} />
         <ambientLight intensity={0.6} />
 
-        <MeshComponent />
+        <group position={[0, -1, 0]}> {/* Adjust position to center the Panda */}
+          <mesh>
+            <planeGeometry args={[20, 20]} /> {/* Use larger geometry for padding */}
+            <meshBasicMaterial color="white" transparent opacity={0} /> {/* Make the padding invisible */}
+          </mesh>
+          <MeshComponent />
+        </group>
       </Canvas>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className=" flex align-middle justify-center mx-20 sm:mx-60 shadow-2xl">
+    <div className=" flex align-middle justify-center mx-10 sm:mx-60 shadow-2xl">
       <article className="rounded-xl dark:bg-white bg-slate-900 p-4 ring ring-indigo-50 sm:p-6 lg:p-8">
         <div className="flex items-start sm:gap-8">
           <div>
