@@ -9,7 +9,7 @@ const Hero = () => {
       <Panda />
       <div
         className="flex items-center justify-center h-screen flex-col text-center"
-        style={{ marginTop: "-120px" }}
+        style={{ marginTop: "" }}
       >
 
         <div className="flex items-center justify-center py-5 mt-10">
