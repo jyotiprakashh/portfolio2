@@ -15,9 +15,8 @@ const Hero = () => {
         <div className="flex items-center justify-center py-5 mt-10">
           <p className="text-4xl sm:text-7xl  font-medium relative z-20  dark:text-white text-black">
 
-            hi! Im
-            <span className="text-4xl sm:text-7xl font-bold relative z-20 ml-4 bg-clip-text text-transparent bg-gradient-to-b from-yellow to-orange  ">
-              Jyoti Prakash
+            hi! I am
+            <span className="text-4xl sm:text-7xl font-bold relative z-20 ml-4 bg-clip-text text-transparent bg-gradient-to-b from-yellow to-orange  ">Jyoti Prakash
             </span>
             
 
