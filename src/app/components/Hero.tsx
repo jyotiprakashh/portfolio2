@@ -58,7 +58,7 @@ const Hero = () => {
               <img src="./twitter.png" alt="" className="dark:invert" />
             </a>
             <a
-              href="https://www.linkedin.com/in/jyoti-prakash"
+              href="https://github.com/jyotiprakashh"
               className="block"
               target="_blank"
             >
