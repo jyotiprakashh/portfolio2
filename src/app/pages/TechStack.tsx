@@ -36,7 +36,7 @@ const TechStack = ({ techStack, competitiveProfiles, navigateTo }: TechStackProp
 
       <section>
         <p className="text-xl font-medium sm:text-2xl text-hBlue">Competitive Coding Profiles</p>
-        <div className="grid grid-cols-3 gap-4 pt-5">
+        <div className="flex gap-6 pt-5">
           {competitiveProfiles.map((profile, index) => (
             <div
               key={index}
