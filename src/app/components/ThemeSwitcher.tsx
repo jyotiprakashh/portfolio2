@@ -16,11 +16,11 @@ const ThemeSwitcher = () => {
       >
         {theme === "light" ? (
           <div>
-            <img src="light.png" alt="invert" className="" />
+            <img src="light.png" alt="invert" className="w-16 " />
           </div>
         ) : (
           <div>
-            <img src="dark.png" alt="" className="invert" />
+            <img src="dark.png" alt="" className="invert w-16" />
           </div>
         )}
       </button>

@@ -1,26 +1,35 @@
 import React from "react";
-import Hero from "./components/Hero";
-import ThemeSwitcher from "./components/ThemeSwitcher";
-import { Panda } from "./components/Panda";
-import Footer from "./components/Footer";
-import About from "./components/About";
+import Home from "./pages/Home";
+import { client } from "../sanity/lib/client";
 
-const page = () => {
+// Define the queries
+const personalInfoQuery = "*[_type == 'personalInfo'][0]";
+const projectsQuery = "*[_type == 'projects']";
+const techStackQuery = "*[_type == 'techStack']";
+const competitiveProfilesQuery = "*[_type == 'competitiveProfiles']";
+
+export const revalidate = 0;
+
+const Page = async () => {
+  // Fetch data inside the component asynchronously
+  const personalInfo = await client.fetch(personalInfoQuery, { });
+  const projects = await client.fetch(projectsQuery, {  });
+  const techStack = await client.fetch(techStackQuery, {  });
+  const competitiveProfiles = await client.fetch(competitiveProfilesQuery, { });
+  // console.log(techStack, competitiveProfiles, projects);
   return (
-    <div className="relative h-full w-full  bg-neutral-50 dark:bg-neutral-950  bg-grid-black/[0.2] dark:bg-grid-white/[0.2] ">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className=" h-full w-full bg-white dark:bg-black [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]"></div>
-      </div>
-      <div>
-        <div className="relative z-10">
-          <ThemeSwitcher />
-          <Hero />
-          <About />
-          <Footer />
-        </div>
+    <div>
+      <div className="relative z-10 ">
+        {/* <ThemeSwitcher /> */}
+        <Home
+          personalInfo={personalInfo}
+          projects={projects}
+          techStack={techStack}
+          competitiveProfiles={competitiveProfiles}
+        />
       </div>
     </div>
   );
 };
 
-export default page;
+export default Page;

@@ -1,11 +1,24 @@
 import React from "react";
 
-const Footer = () => {
+interface FooterProps {
+  personalInfo: any;
+}
+
+const Footer = ({ personalInfo }: FooterProps) => {
   return (
-    <footer className="bg-white dark:bg-neutral-900/40 mx-auto  mt-56">
-          <p className=" text-center text-sm text-gray-500 dark:text-gray-300">@2024 Jyoti Prakash Panda</p>
-    
-    </footer>
+    <div className="flex justify-center md:justify-end items-end p-4">
+      <a
+        href={`mailto:${personalInfo.email}`}
+        className="relative group cursor-pointer"
+        title="Contact via Email"
+      >
+        <img
+          className="w-10 md:w-14 transition-transform duration-300 ease-in-out transform group-hover:scale-110 group-hover:-rotate-6"
+          src="/Email.png"
+          alt="Email"
+        />
+      </a>
+    </div>
   );
 };
 
