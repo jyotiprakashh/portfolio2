@@ -55,7 +55,7 @@ const Card = ({
   };
 
   return (
-    <div className="flex items-center justify-center flex-col ">
+    <div className="flex items-center justify-center flex-col -mt-7">
       <div className="relative bg-gradient-to-br from-hGray/10 via-transparent to-transparent backdrop-blur-xl bg-hBlack/30 border border-hGray/20 rounded-xl shadow-lg w-full  max-w-3xl h-[400px] ">
         {steps[currentStep].component}
 

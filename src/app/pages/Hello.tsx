@@ -11,7 +11,7 @@ const Hello = ({ personalInfo, navigateTo }: HelloProps) => {
       <p className="text-2xl font-light text-white">
         Hello, I am <span className="font-semibold">{personalInfo.name}</span>
       </p>
-      <p className="text-xl font-light pt-5 text-gray-300">{personalInfo.tagline}</p>
+      <p className="sm:text-xl text-base font-light pt-5 text-gray-300">{personalInfo.tagline}</p>
 
       <div className="flex gap-6 pt-6">
         <a href={personalInfo.github} target="_blank" className="group">

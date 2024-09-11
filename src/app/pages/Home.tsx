@@ -27,7 +27,7 @@ const Home = ({ personalInfo, projects, techStack, competitiveProfiles }: HomePr
       </div>
 
       <div className="relative z-10 flex justify-center items-center p-4">
-        <div className="w-full max-w-[650px]"> 
+        <div className="w-full max-w-[650px] "> 
           <Card
             personalInfo={personalInfo}
             projects={projects}
