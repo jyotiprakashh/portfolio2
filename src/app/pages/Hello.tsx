@@ -39,7 +39,7 @@ const Hello = ({ personalInfo, navigateTo }: HelloProps) => {
   >
     <span className="transition-transform duration-300 hover:translate-x-1">About</span>
     <img
-      src="/arrow.png"
+      src="/Arrow.png"
       alt="Next"
       className="w-3 transition-transform duration-300"
     />

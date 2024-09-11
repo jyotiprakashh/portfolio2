@@ -74,7 +74,7 @@ const Projects = ({ projects, navigateTo }: ProjectsProps ) => {
           onClick={() => navigateTo(2)}
         >
           <img
-            src="/arrow.png"
+            src="/Arrow.png"
             alt="Back"
             className="w-3 rotate-180 transition-transform duration-300"
           />
@@ -86,7 +86,7 @@ const Projects = ({ projects, navigateTo }: ProjectsProps ) => {
         >
           <span className="transition-transform duration-300 hover:translate-x-1">Home</span>
           <img
-            src="/arrow.png"
+            src="/Arrow.png"
             alt="Next"
             className="w-3 transition-transform duration-300"
           />

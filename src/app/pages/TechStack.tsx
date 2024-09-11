@@ -62,7 +62,7 @@ const TechStack = ({ techStack, competitiveProfiles, navigateTo }: TechStackProp
           onClick={() => navigateTo(1)}
         >
           <img
-            src="/arrow.png"
+            src="/Arrow.png"
             alt="Back"
             className="w-3 rotate-180 transition-transform duration-300"
           />
@@ -75,7 +75,7 @@ const TechStack = ({ techStack, competitiveProfiles, navigateTo }: TechStackProp
         >
           <span className="transition-transform duration-300 hover:translate-x-1">Projects</span>
           <img
-            src="/arrow.png"
+            src="/Arrow.png"
             alt="Next"
             className="w-3 transition-transform duration-300"
           />

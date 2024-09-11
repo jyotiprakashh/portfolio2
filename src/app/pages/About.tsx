@@ -35,7 +35,7 @@ const About = ({ personalInfo, navigateTo }: AboutProps) => {
           onClick={() => navigateTo(0)}
         >
           <img
-            src="/arrow.png"
+            src="/Arrow.png"
             alt="Back"
             className="w-3 rotate-180 transition-transform duration-300"
           />
@@ -52,7 +52,7 @@ const About = ({ personalInfo, navigateTo }: AboutProps) => {
             Tech Stacks
           </span>
           <img
-            src="/arrow.png"
+            src="/Arrow.png"
             alt="Next"
             className="w-3 transition-transform duration-300"
           />
