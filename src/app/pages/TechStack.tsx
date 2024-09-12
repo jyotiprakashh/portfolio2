@@ -13,13 +13,13 @@ const TechStack = ({ techStack, competitiveProfiles, navigateTo }: TechStackProp
       <section>
         <p className="text-2xl font-medium text-hBlue">My Tech Stacks</p>
         <div className="overflow-hidden relative pt-5">
-          <div className="flex animate-marquee space-x-8 whitespace-nowrap">
+          <div className="flex animate-marquee sm:space-x-8 space-x-3 whitespace-nowrap">
             {techStack.map((tech, index) => (
               <img
                 key={index}
                 src={urlFor(tech.techlogo).width(200).url()}
                 alt={`${tech.name} logo`}
-                className="h-16 w-16 object-contain transition-transform duration-300 transform hover:scale-110"
+                className="sm:h-16 sm:w-16 w-10 object-contain transition-transform duration-300 transform hover:scale-110"
               />
             ))}
             {techStack.map((tech, index) => (
@@ -27,14 +27,14 @@ const TechStack = ({ techStack, competitiveProfiles, navigateTo }: TechStackProp
                 key={`${index}-duplicate`}
                 src={urlFor(tech.techlogo).width(200).url()}
                 alt={`${tech.name} logo`}
-                className="h-16 w-16 object-contain transition-transform duration-300 transform hover:scale-110"
+                className="sm:h-16 sm:w-16 w-10 object-contain transition-transform duration-300 transform hover:scale-110"
               />
             ))}
           </div>
         </div>
       </section>
 
-      <section>
+      <section className='sm:pt-0 pt-2'>
         <p className="text-xl font-medium sm:text-2xl text-hBlue">Competitive Coding Profiles</p>
         <div className="flex gap-6 pt-5">
           {competitiveProfiles.map((profile, index) => (
@@ -46,9 +46,9 @@ const TechStack = ({ techStack, competitiveProfiles, navigateTo }: TechStackProp
               <img
                 src={urlFor(profile.profileImage).width(200).url()}
                 alt={`${profile.platform} profile`}
-                className="h-16 w-16 object-contain rounded-full transition-transform duration-300 transform group-hover:scale-110"
+                className="sm:h-16 sm:w-16 w-12 object-contain rounded-full transition-transform duration-300 transform group-hover:scale-110"
               />
-              <div className="absolute inset-0 flex items-center h-16 w-16 justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-full">
+              <div className="absolute inset-0 flex items-center sm:h-16 sm:w-16 w-12 justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50 rounded-full">
                 <p className="text-white text-sm font-medium text-center">Visit Profile</p>
               </div>
             </div>
@@ -56,7 +56,7 @@ const TechStack = ({ techStack, competitiveProfiles, navigateTo }: TechStackProp
         </div>
       </section>
 
-      <section className="flex justify-between gap-6 pt-2">
+      <section className="flex justify-between gap-6 sm:pt-2 pt-10">
         <button
           className="flex items-center gap-2 text-hLightBlue hover:text-hBlue transition-transform duration-300 transform hover:scale-105"
           onClick={() => navigateTo(1)}

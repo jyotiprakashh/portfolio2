@@ -4,9 +4,9 @@ import { client } from "../sanity/lib/client";
 
 // Define the queries
 const personalInfoQuery = "*[_type == 'personalInfo'][0]";
-const projectsQuery = "*[_type == 'projects']";
+const projectsQuery = "*[_type == 'projects'] | order(_updatedAt desc)";
 const techStackQuery = "*[_type == 'techStack'] | order(_updatedAt asc)";
-const competitiveProfilesQuery = "*[_type == 'competitiveProfiles']";
+const competitiveProfilesQuery = "*[_type == 'competitiveProfiles'] | order(_updatedAt desc)";
 
 export const revalidate = 0;
 

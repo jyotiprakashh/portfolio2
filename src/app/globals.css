@@ -63,7 +63,8 @@
   }
   
   .animate-marquee {
-    animation: marquee 15s linear infinite;
+    animation: marquee 10s linear infinite;
+    animation-play-state: running;
   }
   
   .whitespace-nowrap {
