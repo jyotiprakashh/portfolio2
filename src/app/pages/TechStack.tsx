@@ -11,7 +11,7 @@ const TechStack = ({ techStack, competitiveProfiles, navigateTo }: TechStackProp
   return (
     <div className="p-10 space-y-8">
       <section>
-        <p className="text-2xl font-medium text-hBlue">My Tech Stacks</p>
+        <p className="text-2xl font-medium text-hGray">My Tech Stacks</p>
         <div className="overflow-hidden relative pt-5">
           <div className="flex animate-marquee sm:space-x-8 space-x-3 whitespace-nowrap">
             {techStack.map((tech, index) => (
@@ -35,7 +35,7 @@ const TechStack = ({ techStack, competitiveProfiles, navigateTo }: TechStackProp
       </section>
 
       <section className='sm:pt-0 pt-2'>
-        <p className="text-xl font-medium sm:text-2xl text-hBlue">Competitive Coding Profiles</p>
+        <p className="text-xl font-medium sm:text-2xl text-hGray">Competitive Coding Profiles</p>
         <div className="flex gap-6 pt-5">
           {competitiveProfiles.map((profile, index) => (
             <div
