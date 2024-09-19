@@ -23,7 +23,7 @@ const About = ({ personalInfo, navigateTo }: AboutProps) => {
          <li> 🚀 Full Stack Developer from Bhubaneswar, India</li>
          <li>I build web apps that solve real problems. Love working with Cloud and DevOps ☁️. Competitive coder on Codeforces and LeetCode 💻. Freelancer with 15+ happy clients.</li>
          <li className="mt-5">When not coding, I enjoy: Designing UI/UX, Playing music, Watching sci-fi movies, Playing sports, Listening Podcasts.</li>
-         <li className="mt-5">But let's be real... 😴 Sleep is my superpower!</li>
+         <li className="mt-5">But let&apos;s be real... 😴 Sleep is my superpower!</li>
          </ul>
         </p>
       </div>
