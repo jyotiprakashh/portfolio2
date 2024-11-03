@@ -5,7 +5,7 @@ interface AboutProps {
   navigateTo: (step: number) => void;
 }
 
-const About = ({ personalInfo, navigateTo }: AboutProps) => {
+const Aboutt = ({ personalInfo, navigateTo }: AboutProps) => {
   return (
     <div className="p-10 ">
       <div></div>
@@ -70,4 +70,4 @@ const About = ({ personalInfo, navigateTo }: AboutProps) => {
   );
 };
 
-export default About;
+export default Aboutt;

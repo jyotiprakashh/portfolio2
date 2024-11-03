@@ -21,8 +21,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        hBlack : '#161618',
+        hBlack : '#191919',
         hGray : "#D9D9D9",
+        hWhite: "#f8fafa",
         hGreen : "#BAD472",
         hBlue : "#DEF0FA",
       },
@@ -32,8 +33,13 @@ module.exports = {
         third: "moveInCircle 40s linear infinite",
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
+        scroll: 'scroll 40s linear infinite',
       },
       keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(calc(-300px * 12))' },
+        },
         moveHorizontal: {
           "0%": {
             transform: "translateX(-50%) translateY(-10%)",

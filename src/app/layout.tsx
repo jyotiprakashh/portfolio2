@@ -2,11 +2,7 @@ import type { Metadata } from "next";
 import { League_Spartan, Caveat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-
-
-const inter = League_Spartan({ subsets: ["latin"] });
-
-const caveat = Caveat({ subsets: ["latin"] });
+import Navbar from "./components/fixed-navbar";
 
 export const metadata: Metadata = {
   title: "Jyoti Prakash Panda",
@@ -20,11 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
       <ThemeProvider attribute="class" defaultTheme="dark">
-      {children}
+        <body className="flex justify-center dark:bg-hBlack bg-hWhite min-h-screen">
+          <div className="sm:w-1/3 w-full min-h-screen">
+            <Navbar />
+            {children}
+          </div>
+        </body>
       </ThemeProvider>
-      </body>
     </html>
   );
 }

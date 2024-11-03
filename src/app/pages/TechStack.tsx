@@ -30,6 +30,14 @@ const TechStack = ({ techStack, competitiveProfiles, navigateTo }: TechStackProp
                 className="sm:h-16 sm:w-16 w-10 object-contain transition-transform duration-300 transform hover:scale-110"
               />
             ))}
+            {techStack.map((tech, index) => (
+              <img
+                key={`${index}-duplicate`}
+                src={urlFor(tech.techlogo).width(200).url()}
+                alt={`${tech.name} logo`}
+                className="sm:h-16 sm:w-16 w-10 object-contain transition-transform duration-300 transform hover:scale-110"
+              />
+            ))}
           </div>
         </div>
       </section>

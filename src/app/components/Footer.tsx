@@ -1,25 +1,19 @@
-import React from "react";
+import Link from 'next/link'
+import React from 'react'
 
-interface FooterProps {
-  personalInfo: any;
+const Footer = () => {
+  return (
+    <div className="p-6 text-gray-600 font-light flex justify-center gap-2 dark:text-gray-400">
+      <div className='flex flex-col items-center'>
+      <div>
+        <span className='font-semibold'>Jyoti Prakash Panda </span> © 2024
+        </div>
+        <div>
+          <p>Inspired by <Link href="https://manuarora.in" target="_blank" className='hover:underline '>Manu Arora</Link></p>
+        </div>
+      </div>
+    </div>
+  )
 }
 
-const Footer = ({ personalInfo }: FooterProps) => {
-  return (
-    <div className="flex justify-center md:justify-end items-end p-4">
-      <a
-        href={`mailto:${personalInfo.email}`}
-        className="relative group cursor-pointer"
-        title="Contact via Email"
-      >
-        <img
-          className="w-10 md:w-14 transition-transform duration-300 ease-in-out transform group-hover:scale-110 group-hover:-rotate-6"
-          src="/Email.png"
-          alt="Email"
-        />
-      </a>
-    </div>
-  );
-};
-
-export default Footer;
+export default Footer

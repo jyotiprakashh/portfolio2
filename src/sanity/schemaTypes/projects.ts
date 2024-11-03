@@ -29,7 +29,7 @@ export default defineType({
       name: 'techStack',
       title: 'Tech Stack',
       type: 'array',
-      of: [{ type: 'reference', to: [{ type: 'techStack' }] }],
+      of: [{ type: 'string' }],
     },
     {
       name: 'projectImage',
