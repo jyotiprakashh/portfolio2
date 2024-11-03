@@ -63,7 +63,7 @@ const About = ({
         </div>
       </div>
       <p className="text-base font-light dark:text-gray-400 text-hBlack mt-5">
-        I'm a{" "}
+        I am a{" "}
         <span className="font-semibold">
           Full Stack Developer and CS undergrad
         </span>{" "}
@@ -71,7 +71,7 @@ const About = ({
         <span className="font-semibold">Cloud and DevOps </span>, I also compete
         on <span className="font-semibold">Codeforces and LeetCode. </span> With
         over <span className="font-semibold">15+ </span> happy freelance
-        clients, I thrive on solving real-world problems. When I'm not coding, I
+        clients, I thrive on solving real-world problems. When I am not coding, I
         enjoy designing UI/UX, playing musical instruments and exploring
         podcasts.
       </p>
@@ -112,8 +112,8 @@ const About = ({
       <div className="dark:text-gray-200 text-gray-600 md:mt-5 mt-8 flex md:flex-row flex-col md:items-center items-start md:gap-2">
         <p className="text-base font-semibold">Coding Profiles : </p>
         <div className="flex gap-4">
-          {competitiveProfiles.map((profile) => (
-            <div className=" dark:text-gray-400 text-hBlack flex flex-row">
+          {competitiveProfiles.map((profile, index) => (
+            <div className=" dark:text-gray-400 text-hBlack flex flex-row" key={index}>
               <Button
                 variant="link"
                 className="text-hLightBlue dark:hover:text-hWhite hover:text-black text-base font-light flex items-center"
