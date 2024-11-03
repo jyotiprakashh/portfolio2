@@ -49,7 +49,7 @@ const About = ({
           <p className="md:text-xl text-lg font-light dark:text-gray-300 text-hBlack">
             Freelance Developer and Designer
           </p>
-          <div className="flex flex-row gap-2">
+          <div className="flex flex-row gap-2 items-center">
             <MapPin className="w-4" />
             <p className="md:text-base text-sm font-light dark:text-gray-300 text-hBlack">
               {" "}

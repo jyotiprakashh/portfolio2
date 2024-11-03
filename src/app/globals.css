@@ -56,17 +56,26 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
 }
 
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 15s linear infinite;
   animation-play-state: running;
 }
 
 .whitespace-nowrap {
   white-space: nowrap;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.scroll-container {
+  overflow: hidden;
+  display: flex;
 }
 
 @layer base {
@@ -125,14 +134,26 @@
   }
 }
 
+
+
 @layer utilities {
+  
   .animate-scroll {
-    animation: scroll 30s linear infinite;
+    animation: scroll 40s linear infinite;
     animation-play-state: running;
 
   }
 
   .animate-scroll:hover {
     animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-300px * 12));
+    }
   }
 }

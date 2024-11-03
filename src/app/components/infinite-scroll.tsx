@@ -41,6 +41,70 @@ export default function InfiniteScroll() {
             </div>
           </div>
         ))}
+        {[...techLogos, ...techLogos].map((logo, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-center w-[75px] flex-shrink-0 mx-4"
+          >
+            <div className="w-8 h-8 rounded-lg bg-white dark:bg-hBlack shadow-md flex items-center justify-center overflow-hidden">
+              <Image
+                src={logo.src}
+                alt={`${logo.name} logo`}
+                width={32}
+                height={32}
+                className="object-contain"
+              />
+            </div>
+          </div>
+        ))}
+        {[...techLogos, ...techLogos].map((logo, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-center w-[75px] flex-shrink-0 mx-4"
+          >
+            <div className="w-8 h-8 rounded-lg bg-white dark:bg-hBlack shadow-md flex items-center justify-center overflow-hidden">
+              <Image
+                src={logo.src}
+                alt={`${logo.name} logo`}
+                width={32}
+                height={32}
+                className="object-contain"
+              />
+            </div>
+          </div>
+        ))}
+        {[...techLogos, ...techLogos].map((logo, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-center w-[75px] flex-shrink-0 mx-4"
+          >
+            <div className="w-8 h-8 rounded-lg bg-white dark:bg-hBlack shadow-md flex items-center justify-center overflow-hidden">
+              <Image
+                src={logo.src}
+                alt={`${logo.name} logo`}
+                width={32}
+                height={32}
+                className="object-contain"
+              />
+            </div>
+          </div>
+        ))}
+        {[...techLogos, ...techLogos].map((logo, index) => (
+          <div
+            key={index}
+            className="flex items-center justify-center w-[75px] flex-shrink-0 mx-4"
+          >
+            <div className="w-8 h-8 rounded-lg bg-white dark:bg-hBlack shadow-md flex items-center justify-center overflow-hidden">
+              <Image
+                src={logo.src}
+                alt={`${logo.name} logo`}
+                width={32}
+                height={32}
+                className="object-contain"
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
