@@ -18,8 +18,6 @@ const Page = async () => {
   return (
     <div className="min-h-screen">
       <div className= "flex justify-center">
-      {/* <Navbar/> */}
-        {/* <ThemeSwitcher /> */}
         <Home
           personalInfo={personalInfo}
           projects={projects}

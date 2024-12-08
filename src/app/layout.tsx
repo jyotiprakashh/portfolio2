@@ -15,15 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <ThemeProvider attribute="class" defaultTheme="dark">
-        <body className="flex justify-center dark:bg-hBlack bg-hWhite min-h-screen">
+    <html lang="en" suppressHydrationWarning>
+      <body className="flex justify-center dark:bg-hBlack bg-hWhite min-h-screen">
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <div className="sm:w-1/3 w-full min-h-screen">
             <Navbar />
             {children}
           </div>
-        </body>
-      </ThemeProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
