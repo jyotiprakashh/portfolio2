@@ -58,9 +58,9 @@ const About = ({
         </div>
         <div className="relative group">
           {/* <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-cyan-500 to-teal-500 rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-500"></div> */}
-          
+
           <div className="absolute inset-0 bg-[linear-gradient(#ffffff12_1px,transparent_1px),linear-gradient(to_right,#ffffff12_1px,transparent_1px)] bg-[size:4px_4px] rounded-xl opacity-50"></div>
-          
+
           <div className="absolute -inset-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <div className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-blue-500"></div>
             <div className="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2 border-teal-500"></div>
@@ -77,7 +77,6 @@ const About = ({
                        filter grayscale group-hover:grayscale-0"
             />
           </div>
-
         </div>
       </div>
       <p className="text-base font-light dark:text-gray-400 text-hBlack mt-5">
@@ -89,8 +88,8 @@ const About = ({
         <span className="font-semibold">Cloud and DevOps </span>, I also compete
         on <span className="font-semibold">Codeforces and LeetCode. </span> With
         over <span className="font-semibold">15+ </span> happy freelance
-        clients, I thrive on solving real-world problems. When I am not coding, I
-        enjoy designing UI/UX, playing musical instruments and exploring
+        clients, I thrive on solving real-world problems. When I am not coding,
+        I enjoy designing UI/UX, playing musical instruments and exploring
         podcasts.
       </p>
       <div className=" dark:text-gray-400 text-gray-700 mt-5 flex flex-row">
@@ -131,7 +130,10 @@ const About = ({
         <p className="text-base font-semibold">Coding Profiles : </p>
         <div className="flex gap-4">
           {competitiveProfiles.map((profile, index) => (
-            <div className=" dark:text-gray-400 text-hBlack flex flex-row" key={index}>
+            <div
+              className=" dark:text-gray-400 text-hBlack flex flex-row"
+              key={index}
+            >
               <Button
                 variant="link"
                 className="dark:hover:text-hWhite hover:text-black text-base font-light flex items-center"
@@ -149,32 +151,68 @@ const About = ({
 
       {/* Experience Section */}
       <div className="mt-16 mb-10">
-        <h2 className="text-2xl font-bold dark:text-white text-hBlack mb-6">Experience</h2>
+        <h2 className="text-2xl font-bold dark:text-white text-hBlack mb-6">
+          Experience
+        </h2>
         <div className="space-y-6">
           <div className="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700">
             <div className="absolute w-4 h-4 bg-white dark:bg-gray-800 border-2 border-blue-500 rounded-full -left-[9px] top-0"></div>
             <div className="mb-1">
-              <h3 className="text-lg font-semibold dark:text-white text-hBlack">Full Stack Developer</h3>
-              <p className="text-blue-500 dark:text-blue-400 font-medium">Factoryspace</p>
+              <h3 className="text-lg font-semibold dark:text-white text-hBlack">
+                Software Engineering Intern
+              </h3>
+              <p className="text-blue-500 dark:text-blue-400 font-medium">
+                Mindfire Solutions
+              </p>
+              <p className="text-blue-500 dark:text-blue-400 font-medium"></p>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                • Build the product from scratch.<br />
-                • Worked on the frontend and backend of the web app.<br />
+                • Worked on a client projects as a full stack developer.
+                <br />• Contributed to various internal projects, enhancing existing systems with improved functionality.
               </p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">Oct 2024 - Present</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+              Jan 2025 - Present
+            </p>
           </div>
 
           <div className="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700">
             <div className="absolute w-4 h-4 bg-white dark:bg-gray-800 border-2 border-blue-500 rounded-full -left-[9px] top-0"></div>
             <div className="mb-1">
-              <h3 className="text-lg font-semibold dark:text-white text-hBlack">Freelance Developer</h3>
-              <p className="text-blue-500 dark:text-blue-400 font-medium"></p>
+              <h3 className="text-lg font-semibold dark:text-white text-hBlack">
+                Full Stack Developer
+              </h3>
+              <p className="text-blue-500 dark:text-blue-400 font-medium">
+                Factoryspace
+              </p>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
-                • Built custom web applications for clients using React, Next.js, Node.js and Golang<br />
-                • Implemented responsive designs and modern UI/UX practices
+                • Built the product from scratch.
+                <br />
+                • Worked on core features of the product.
+                <br />
               </p>
             </div>
-            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">Jun 2023 - Aug 2024</p>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+              Oct 2024 - Present
+            </p>
+          </div>
+
+          <div className="relative pl-8 border-l-2 border-gray-200 dark:border-gray-700">
+            <div className="absolute w-4 h-4 bg-white dark:bg-gray-800 border-2 border-blue-500 rounded-full -left-[9px] top-0"></div>
+            <div className="mb-1">
+              <h3 className="text-lg font-semibold dark:text-white text-hBlack">
+                Freelance Developer
+              </h3>
+              <p className="text-blue-500 dark:text-blue-400 font-medium"></p>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                • Built custom web applications for clients using React,
+                Next.js, Node.js and Golang
+                <br />• Implemented responsive designs and modern UI/UX
+                practices
+              </p>
+            </div>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">
+              Jun 2023 - Aug 2024
+            </p>
           </div>
         </div>
       </div>
