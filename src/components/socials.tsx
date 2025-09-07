@@ -1,57 +1,45 @@
-"use client";
-
 import { client } from "@/sanity/lib/client";
-import { useEffect, useState } from "react";
-import { GithubLogo, LinkedinLogo, TwitterLogo, Link } from "@phosphor-icons/react";
+import { Github, Linkedin, Twitter, Link as LinkIcon } from "lucide-react"; // Use lucide-react icons
 
-const socialHandlesQuery = "*[_type == 'socialHandles']";
+// 1. Define a TypeScript interface for your data
+interface SocialHandle {
+    _id: string;
+    platform: string;
+    link: string;
+}
 
-const getPlatformIcon = (platform: string) => {
-    const platformIcons: { [key: string]: React.ComponentType<any> } = {
-        'github': GithubLogo,
-        'linkedin': LinkedinLogo,
-        'twitter': TwitterLogo,
-    };
-
-    const normalizedPlatform = platform.toLowerCase();
-    return platformIcons[normalizedPlatform] || Link;
+// 2. Map platform names to the imported icon components
+const platformIcons: { [key: string]: React.ComponentType<any> } = {
+    github: Github,
+    linkedin: Linkedin,
+    x: Twitter,
 };
 
-export default function Socials() {
-    const [socialHandles, setSocialHandles] = useState<any[]>([]);
+// 3. Make the component an async Server Component
+export default async function Socials() {
+    const socialHandlesQuery = "*[_type == 'socialHandles']";
+    const socialHandles: SocialHandle[] = await client.fetch(socialHandlesQuery);
 
-    useEffect(() => {
-        const fetchSocialHandles = async () => {
-            try {
-                const data = await client.fetch(socialHandlesQuery, {});
-                setSocialHandles(Array.isArray(data) ? data : []);
-            } catch (error) {
-                console.error('Error fetching social handles:', error);
-                setSocialHandles([]);
-            }
-        };
-
-        fetchSocialHandles();
-    }, []);
-
-    if (socialHandles.length === 0) {
-        return null;
+    if (!socialHandles || socialHandles.length === 0) {
+        return null; // Don't render anything if there are no socials
     }
 
     return (
         <div className="flex gap-4 mt-6">
-            {socialHandles.map((socialHandle) => {
-                const Icon = getPlatformIcon(socialHandle.platform);
+            {socialHandles.map((handle) => {
+                // Find the corresponding icon component, with a fallback
+                const Icon = platformIcons[handle.platform.toLowerCase()] || LinkIcon;
+
                 return (
                     <a
-                        key={socialHandle._id}
-                        href={socialHandle.link}
+                        key={handle._id}
+                        href={handle.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-foreground hover:text-accent-foreground transition-colors hover:scale-110 duration-200 cursor-pointer"
-                        aria-label={socialHandle.platform}
+                        aria-label={`Link to my ${handle.platform} profile`} // More descriptive aria-label
+                        className="text-muted-foreground transition-transform duration-200 hover:text-accent-foreground hover:scale-110"
                     >
-                        <Icon className="w-6 h-6" weight="duotone" />
+                        <Icon size={20} />
                     </a>
                 );
             })}
