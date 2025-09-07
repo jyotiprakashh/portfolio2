@@ -29,11 +29,25 @@ export default async function About() {
         <div className="flex flex-col justify-center min-h-[calc(100vh-11rem)]">
             <div className="relative mt-4 md:mt-0 flex-shrink-0">
                 <div
-                    className="absolute inset-[-2rem] z-[-1]" // Negative inset makes it larger
+                    className="absolute inset-[-2rem] z-[-1] dark:hidden" // Negative inset makes it larger
                     style={{
                         backgroundImage: `
-                                    linear-gradient(to right, #d1d5db 1px, transparent 1px),
-                                    linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+                                    linear-gradient(to right,rgb(212, 210, 205) 1px, transparent 1px),
+                                    linear-gradient(to bottom,rgb(212, 210, 205) 1px, transparent 1px)
+                                `,
+                        backgroundSize: "32px 32px",
+                        WebkitMaskImage:
+                            "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+                        maskImage:
+                            "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+                    }}
+                />
+                 <div
+                    className="absolute inset-[-2rem] z-[-1] hidden dark:block" // Negative inset makes it larger
+                    style={{
+                        backgroundImage: `
+                                    linear-gradient(to right, #56453F 1px, transparent 1px),
+                                    linear-gradient(to bottom, #56453F 1px, transparent 1px)
                                 `,
                         backgroundSize: "32px 32px",
                         WebkitMaskImage:
