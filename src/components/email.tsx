@@ -36,7 +36,7 @@ export default function Emailbox() {
         onMouseLeave={() => setIsHovered(false)}
         className={`relative group flex items-center gap-3 ${
           isHovered ? 'pr-5' : 'pr-4'
-        } pl-4 py-3 rounded-full bg-secondary backdrop-blur-lg border border-gray-200/20 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95`}
+        } pl-4 py-3 rounded-full bg-accent-foreground backdrop-blur-lg border border-gray-200/20 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 active:scale-95`}
         aria-label="Send me an email"
         title="Send me an email"
       >
@@ -50,13 +50,13 @@ export default function Emailbox() {
             <EnvelopeSimple 
               className={`w-5 h-5 transition-colors duration-300 ${
                 isHovered 
-                  ? 'text-secondary-foreground' 
-                  : 'text-secondary-foreground'
+                  ? 'text-accent' 
+                  : 'text-accent'
               }`} 
               weight={isHovered ? 'fill' : 'regular'}
             />
             <span 
-              className={`text-sm font-medium text-secondary-foreground whitespace-nowrap transition-all duration-300 ${
+              className={`text-sm font-medium text-accent whitespace-nowrap transition-all duration-300 ${
                 isHovered 
                   ? 'opacity-100 translate-x-0 inline-block' 
                   : 'opacity-0 -translate-x-2 hidden'
