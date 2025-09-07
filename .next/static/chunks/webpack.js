@@ -192,7 +192,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-/******/ 		__webpack_require__.h = function() { return "3f9bd76a05b14a7e"; }
+/******/ 		__webpack_require__.h = function() { return "baaa91a86ff22c75"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -830,7 +830,6 @@
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = __webpack_require__.hmrS_jsonp = __webpack_require__.hmrS_jsonp || {
 /******/ 			"webpack": 0,
-/******/ 			"css-node_modules_next_font_google_target_css": 0,
 /******/ 			"css-src_app_globals_css-node_modules_next_font_google_target_css": 0
 /******/ 		};
 /******/ 		
@@ -843,7 +842,7 @@
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if(!/^(css\-(|src_app_globals_css\-)node_modules_next_font_google_target_css|webpack)$/.test(chunkId)) {
+/******/ 						if(!/^(css\-src_app_globals_css\-node_modules_next_font_google_target_css|webpack)$/.test(chunkId)) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise(function(resolve, reject) { installedChunkData = installedChunks[chunkId] = [resolve, reject]; });
 /******/ 							promises.push(installedChunkData[2] = promise);

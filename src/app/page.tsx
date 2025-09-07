@@ -1,30 +1,21 @@
 import React from "react";
-import Home from "./components/home-component";
-import { client } from "../sanity/lib/client";
-import Navbar from "./components/floating-navbar";
-
-const personalInfoQuery = "*[_type == 'personalInfo'][0]";
-const projectsQuery = "*[_type == 'projects'] | order(_updatedAt desc)";
-const techStackQuery = "*[_type == 'techStack'] | order(_updatedAt asc)";
-const competitiveProfilesQuery = "*[_type == 'competitiveProfiles'] | order(_updatedAt desc)";
-
-export const revalidate = 0;
+import About from "../components/about";
+import Projects from "../components/projects";
+import Experiences from "@/components/experiences";
+import Emailbox from "@/components/email";
+import Footer from "@/components/footer";
 
 const Page = async () => {
-  const personalInfo = await client.fetch(personalInfoQuery, { });
-  const projects = await client.fetch(projectsQuery, {  });
-  const techStack = await client.fetch(techStackQuery, {  });
-  const competitiveProfiles = await client.fetch(competitiveProfilesQuery, { });
   return (
-    <div className="min-h-screen">
-      <div className= "flex justify-center">
-        <Home
-          personalInfo={personalInfo}
-          projects={projects}
-          techStack={techStack}
-          competitiveProfiles={competitiveProfiles}
-        />
+    <div className="md:w-3/4 md:max-w-3xl w-full px-4 sm:px-6 lg:px-8 mt-28">
+      <About />
+      {/* <CPProfiles /> */}
+      <Experiences />
+      <Projects />
+      <div className="fixed bottom-5 right-5">
+        <Emailbox />
       </div>
+      <Footer />
     </div>
   );
 };

@@ -4,7 +4,6 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { SquareArrowOutUpRight } from "lucide-react";
 import { urlFor } from "../../sanity/lib/client";
 
 
@@ -92,7 +91,7 @@ export default function GlowCard({
               asChild
             >
               <Link href={livelink} target="_blank">
-                <p className="font-light text-base">Live</p> <SquareArrowOutUpRight className="w-2" />
+                {/* <p className="font-light text-base">Live</p> <SquareArrowOutUpRight className="w-2" /> */}
               </Link>
             </Button>
           )}
@@ -103,7 +102,7 @@ export default function GlowCard({
               asChild
             >
               <Link href={githublink} target="_blank">
-                <p className="font-light text-base">Github</p> <SquareArrowOutUpRight className="w-2" />
+                {/* <p className="font-light text-base">Github</p> <SquareArrowOutUpRight className="w-2" /> */}
               </Link>
             </Button>
           )}

@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { League_Spartan, Caveat } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import Navbar from "./components/fixed-navbar";
+import Navbar from "../components/fixed-navbar";
 
 export const metadata: Metadata = {
   title: "Jyoti Prakash Panda",
-  description: "",
+  description: "Portfolio of Jyoti Prakash Panda",
 };
 
 export default function RootLayout({
@@ -16,12 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="flex justify-center dark:bg-hBlack bg-hWhite min-h-screen">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          <div className="sm:w-1/3 w-full min-h-screen">
-            <Navbar />
-            {children}
-          </div>
+      <body className="flex justify-center bg-background">
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <Navbar />
+          {children}
         </ThemeProvider>
       </body>
     </html>
