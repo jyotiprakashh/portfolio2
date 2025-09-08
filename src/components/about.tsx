@@ -28,7 +28,7 @@ export default async function About() {
 
     return (
         <section className="flex flex-col justify-center min-h-[calc(100vh-10rem)]" id="about">
-            <div className="relative -mt-8 flex-shrink-0">
+            <div className="relative -mt-12 flex-shrink-0">
                 <div
                     className="absolute inset-[-2rem] z-[-1] dark:hidden -translate-x-6"
                     style={{
