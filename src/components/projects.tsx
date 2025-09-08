@@ -23,7 +23,7 @@ export default async function Projects() {
 
     if (!projects || projects.length === 0) {
         return (
-            <section className="py-6">
+            <section className="py-6" id="projects">
                 <h2 className="text-2xl font-bold mb-4 text-foreground">Projects</h2>
                 <div className="text-center py-8 text-muted-foreground">No projects to display.</div>
             </section>
@@ -31,7 +31,7 @@ export default async function Projects() {
     }
 
     return (
-        <section className="py-6">
+        <section className="py-6" id="projects">
             <h2 className="text-2xl font-bold mb-4 text-foreground">Projects</h2>
             <div className="space-y-4">
                 {projects.map((project) => (
@@ -45,7 +45,7 @@ export default async function Projects() {
                                     {project.title}
                                 </h3>
                                 {project.featured && (
-                                    <Badge variant="outline" className="text-[10px] h-5 px-1.5">
+                                    <Badge variant="outline" className="text-[10px] h-5">
                                         Featured
                                     </Badge>
                                 )}
@@ -61,7 +61,7 @@ export default async function Projects() {
                                     <Badge 
                                         key={tool} // Use the tool name as a key if they are unique
                                         variant="secondary" 
-                                        className="text-[10px] h-5 px-1.5"
+                                        className="text-[10px]"
                                     >
                                         {tool}
                                     </Badge>
