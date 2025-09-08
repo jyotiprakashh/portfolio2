@@ -2,7 +2,7 @@ import React from "react";
 import About from "../components/about";
 import Projects from "../components/projects";
 import Experiences from "@/components/experiences";
-import Emailbox from "@/components/email";
+import ScrollArrow from "@/components/scroll-arrow";
 import Footer from "@/components/footer";
 
 const Page = async () => {
@@ -12,9 +12,7 @@ const Page = async () => {
       {/* <CPProfiles /> */}
       <Experiences />
       <Projects />
-      <div className="fixed bottom-5 right-5">
-        <Emailbox />
-      </div>
+      <ScrollArrow />
       <Footer />
     </div>
   );

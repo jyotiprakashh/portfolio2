@@ -23,7 +23,7 @@ export default function Navbar() {
   return (
     <div className="fixed top-0 z-50 md:w-3/4 md:max-w-3xl w-full">
       <motion.nav 
-        className="flex items-center justify-between bg-opacity-80 backdrop-blur-sm rounded-full px-6 py-3 relative"
+        className="flex items-center justify-between bg-opacity-80 backdrop-blur-sm rounded-full px-6 py-1 relative"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ 
@@ -35,7 +35,7 @@ export default function Navbar() {
       >
         <div className="flex items-center space-x-2 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <p
-            className={`${caveat.className}  text-2xl font-thin text-accent-foreground`}
+            className={`${caveat.className}  text-xl font-thin text-accent-foreground`}
           >
             {" "}
             Jp
@@ -52,11 +52,11 @@ export default function Navbar() {
             exit={{ rotate: -360, scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {theme === "light" ? <Moon size={24} /> : <Sun size={24} />}
+            {theme === "light" ? <Moon size={20} /> : <Sun size={20} />}
           </motion.button>
         </AnimatePresence>
 
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 opacity-30 w-full bg-accent-foreground rounded-full"></div>
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 opacity-20 w-full bg-accent-foreground rounded-full"></div>
       </motion.nav>
     </div>
   );

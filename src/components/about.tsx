@@ -1,6 +1,6 @@
 import { client } from "@/sanity/lib/client";
 import { PortableText } from "next-sanity";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Mail } from "lucide-react";
 import Socials from "./socials";
 import type { PortableTextBlock } from "next-sanity";
 import { urlFor } from "@/sanity/lib/image"; // Corrected function name
@@ -14,6 +14,7 @@ interface PersonalInfo {
     description: PortableTextBlock[];
     resumeLink: string;
     profilePic: any; // Use 'any' or a more specific Sanity image type
+    email: string;
 }
 
 const personalInfoQuery = "*[_type == 'personalInfo'][0]";
@@ -26,10 +27,10 @@ export default async function About() {
     }
 
     return (
-        <div className="flex flex-col justify-center min-h-[calc(100vh-11rem)]">
-            <div className="relative mt-4 md:mt-0 flex-shrink-0">
+        <section className="flex flex-col justify-center min-h-[calc(100vh-10rem)]" id="about">
+            <div className="relative -mt-8 flex-shrink-0">
                 <div
-                    className="absolute inset-[-2rem] z-[-1] dark:hidden" // Negative inset makes it larger
+                    className="absolute inset-[-2rem] z-[-1] dark:hidden -translate-x-6"
                     style={{
                         backgroundImage: `
                                     linear-gradient(to right,rgb(212, 210, 205) 1px, transparent 1px),
@@ -42,8 +43,8 @@ export default async function About() {
                             "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
                     }}
                 />
-                 <div
-                    className="absolute inset-[-2rem] z-[-1] hidden dark:block" // Negative inset makes it larger
+                <div
+                    className="absolute inset-[-2rem] z-[-1] hidden dark:block"
                     style={{
                         backgroundImage: `
                                     linear-gradient(to right, #56453F 1px, transparent 1px),
@@ -82,21 +83,31 @@ export default async function About() {
             </div>
 
             {/* Rest of your component */}
-            <div className="prose max-w-none text-sm text-accent-foreground mt-8"> {/* Increased margin-top */}
+            <div className="prose max-w-none text-sm text-accent-foreground mt-6"> {/* Increased margin-top */}
                 <PortableText value={personalInfo.description} />
             </div>
 
-            <a
-                href={personalInfo.resumeLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center gap-2 mt-6 text-sm text-muted-foreground hover:text-accent-foreground transition-colors duration-300 w-fit"
-            >
-                My Resume
-                <ArrowUpRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </a>
+            <div className="flex items-center gap-3 mt-6">
+                <a
+                    href={personalInfo.resumeLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-accent-foreground transition-colors duration-300 border-b border-border hover:border-accent-foreground/50 leading-none pb-0.5"
+                >
+                    Resume
+                </a>
+                <div className="w-px h-4 bg-muted-foreground/50"></div>
+                <a
+                    href={`mailto:${personalInfo.email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-muted-foreground hover:text-accent-foreground transition-colors duration-300 border-b border-border hover:border-accent-foreground/50 leading-none pb-0.5"
+                >
+                    Contact
+                </a>
+            </div>
 
             <Socials />
-        </div>
+        </section>
     );
 }
