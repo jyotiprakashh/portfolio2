@@ -31,8 +31,8 @@ export default async function Projects() {
     }
 
     return (
-        <section className="py-6" id="projects">
-            <h2 className="text-4xl font-medium mb-4 text-foreground">Projects</h2>
+        <section className="mb-6 mt-12" id="projects">
+            <h2 className="sm:text-4xl text-3xl font-medium mb-4 text-foreground">Projects</h2>
             <div className="space-y-4">
                 {projects.map((project) => (
                     <div 

@@ -27,8 +27,8 @@ export default async function Experiences() {
     }
 
     return (
-        <section className="py-8 flex flex-col justify-center min-h-[calc(100vh-11rem)]" id="experiences">
-            <h2 className="text-4xl font-medium mb-6 text-foreground">Experience</h2>
+        <section className="py-8 flex flex-col justify-center min-h-[calc(100vh-11rem)] mt-12" id="experiences">
+            <h2 className="sm:text-4xl text-3xl font-medium mb-6 text-foreground">Experience</h2>
             <div className="space-y-6">
                 {experiences.map((exp) => (
                     <div
