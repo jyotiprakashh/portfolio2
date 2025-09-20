@@ -60,8 +60,8 @@ export default async function About() {
                 <div className="flex flex-col md:flex-row items-start justify-between gap-8">
                     {/* Text content on the left */}
                     <div className="text-left">
-                        <h1 className="text-5xl text-accent-foreground">{personalInfo.name}</h1>
-                        <p className="mt-1 text-xl text-muted-foreground">{personalInfo.designation}</p>
+                        <h1 className="sm:text-5xl text-4xl text-accent-foreground">{personalInfo.name}</h1>
+                        <p className="mt-1 sm:text-xl text-base text-muted-foreground">{personalInfo.designation}</p>
                         <p className="text-sm text-muted-foreground">{personalInfo.address}</p>
                     </div>
 
@@ -83,7 +83,7 @@ export default async function About() {
             </div>
 
             {/* Rest of your component */}
-            <div className="prose max-w-none text-base text-muted-foreground mt-6"> {/* Increased margin-top */}
+            <div className="prose max-w-none sm:text-base text-sm text-muted-foreground mt-6"> {/* Increased margin-top */}
                 <PortableText value={personalInfo.description} />
             </div>
 
