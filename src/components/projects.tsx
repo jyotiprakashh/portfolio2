@@ -32,16 +32,16 @@ export default async function Projects() {
 
     return (
         <section className="py-6" id="projects">
-            <h2 className="text-2xl font-bold mb-4 text-foreground">Projects</h2>
+            <h2 className="text-4xl font-medium mb-4 text-foreground">Projects</h2>
             <div className="space-y-4">
                 {projects.map((project) => (
                     <div 
                         key={project._id}
-                        className="border rounded-lg p-4 hover:shadow-sm transition-shadow duration-200 border-border"
+                        className="border-b py-4 hover:shadow-sm transition-shadow duration-200 border-border"
                     >
-                        <div className="flex flex-col gap-2">
+                        <div className="flex flex-col gap-1">
                             <div className="flex items-center gap-2">
-                                <h3 className="text-lg font-semibold text-foreground">
+                                <h3 className="text-lg font-base text-foreground">
                                     {project.title}
                                 </h3>
                                 {project.featured && (
@@ -75,7 +75,7 @@ export default async function Projects() {
                         </div>
 
                         {/* 3. Improved Links with Group Hover Effect */}
-                        <div className="mt-3 flex gap-4 text-xs">
+                        <div className="mt-6 flex gap-4 text-xs">
                             {project.github && (
                                 <a
                                     href={project.github}
