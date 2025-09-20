@@ -23,7 +23,7 @@ export default async function About() {
     const personalInfo: PersonalInfo = await client.fetch(personalInfoQuery);
 
     if (!personalInfo) {
-        return <div>Personal information not found.</div>;
+        return <div>Umm Sorry something went wrong...</div>;
     }
 
     return (
@@ -33,8 +33,8 @@ export default async function About() {
                     className="absolute inset-[-2rem] z-[-1] dark:hidden -translate-x-6"
                     style={{
                         backgroundImage: `
-                                    linear-gradient(to right,rgb(212, 210, 205) 1px, transparent 1px),
-                                    linear-gradient(to bottom,rgb(212, 210, 205) 1px, transparent 1px)
+                                    linear-gradient(to right,rgb(187, 187, 187) 1px, transparent 1px),
+                                    linear-gradient(to bottom,rgb(187, 187, 187) 1px, transparent 1px)
                                 `,
                         backgroundSize: "32px 32px",
                         WebkitMaskImage:
@@ -47,8 +47,8 @@ export default async function About() {
                     className="absolute inset-[-2rem] z-[-1] hidden dark:block"
                     style={{
                         backgroundImage: `
-                                    linear-gradient(to right, #56453F 1px, transparent 1px),
-                                    linear-gradient(to bottom, #56453F 1px, transparent 1px)
+                                    linear-gradient(to right,rgb(66, 66, 66) 1px, transparent 1px),
+                                    linear-gradient(to bottom,rgb(66, 66, 66) 1px, transparent 1px)
                                 `,
                         backgroundSize: "32px 32px",
                         WebkitMaskImage:
@@ -60,15 +60,15 @@ export default async function About() {
                 <div className="flex flex-col md:flex-row items-start justify-between gap-8">
                     {/* Text content on the left */}
                     <div className="text-left">
-                        <h1 className="text-4xl font-bold text-accent-foreground">{personalInfo.name}</h1>
-                        <p className="mt-1 text-lg text-muted-foreground">{personalInfo.designation}</p>
+                        <h1 className="text-5xl text-accent-foreground">{personalInfo.name}</h1>
+                        <p className="mt-1 text-xl text-muted-foreground">{personalInfo.designation}</p>
                         <p className="text-sm text-muted-foreground">{personalInfo.address}</p>
                     </div>
 
                     {/* Profile picture section on the right */}
                     {personalInfo.profilePic && (
                         <div className="relative mt-4 md:mt-0 flex-shrink-0 hidden md:block">
-                            <div className="w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden border-2 border-accent-foreground/10 hover:border-accent-foreground/30 transition-all duration-300">
+                            <div className="w-16 h-16 md:w-24 md:h-24 -mt-2 rounded-lg overflow-hidden border-2 border-accent-foreground/10 hover:border-accent-foreground/30 transition-all duration-300 grayscale-[50%] hover:grayscale-0">
                                 <Image
                                     src={urlFor(personalInfo.profilePic).url()}
                                     alt={personalInfo.name}
@@ -83,7 +83,7 @@ export default async function About() {
             </div>
 
             {/* Rest of your component */}
-            <div className="prose max-w-none text-sm text-accent-foreground mt-6"> {/* Increased margin-top */}
+            <div className="prose max-w-none text-base text-muted-foreground mt-6"> {/* Increased margin-top */}
                 <PortableText value={personalInfo.description} />
             </div>
 

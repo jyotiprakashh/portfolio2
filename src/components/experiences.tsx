@@ -28,17 +28,17 @@ export default async function Experiences() {
 
     return (
         <section className="py-8 flex flex-col justify-center min-h-[calc(100vh-11rem)]" id="experiences">
-            <h2 className="text-2xl font-bold mb-6 text-foreground">Experience</h2>
+            <h2 className="text-4xl font-medium mb-6 text-foreground">Experience</h2>
             <div className="space-y-6">
                 {experiences.map((exp) => (
                     <div
                         key={exp._id}
-                        className="hover:shadow-sm transition-shadow duration-200"
+                        className="border-b py-4 transition-shadow duration-200 border-border"
                     >
                         <div className="flex items-start">
                             <div className="flex-1">
                                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                                    <h3 className="text-lg font-semibold text-foreground">
+                                    <h3 className="text-xl font-medium text-foreground">
                                         {exp.title}
                                     </h3>
                                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
